@@ -1,5 +1,5 @@
 {
   "singleQuote": true,
-  "printWidth": 50,
-  "prettier.endOfLine": "auto"
+  "printWidth": 80,
+  "endOfLine": "auto"
 }
