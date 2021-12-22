@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-const app = require('./app');
 const dotenv = require('dotenv');
+const app = require('./app');
 
 dotenv.config({ path: './config.env' });
 
@@ -15,14 +15,12 @@ mongoose
     useFindAndModify: false,
     useUnifiedTopology: true,
   })
-  .then((conn) => {
+  .then(() => {
     // console.log(conn.connections);
     console.log('DB connection Success');
   });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(
-    `App is running on PORT : ${PORT} `
-  );
+  console.log(`App is running on PORT : ${PORT} `);
 });
